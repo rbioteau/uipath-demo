@@ -1,3 +1,5 @@
+import org.bonitasoft.engine.connector.uipath.model.JobState
+
 class JobStatusChecker {
 
 	static boolean hasFailed(String state) {
