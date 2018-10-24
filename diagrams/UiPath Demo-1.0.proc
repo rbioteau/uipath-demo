@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/studio/configuration" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_KtCJ4NK6Eeiy3aFFlnjiUA" name="UiPath Demo" author="romain" bonitaVersion="7.8.0" bonitaModelVersion="7.8.0-002" configId="ACED000574001B5569506174682044656D6F372E382E302D303032372E382E307370">
     <elements xmi:type="process:Pool" xmi:id="_KtCJ4dK6Eeiy3aFFlnjiUA" name="Add Todo">
       <elements xmi:type="process:Task" xmi:id="_KtCJ59K6Eeiy3aFFlnjiUA" name="Create new Todo item" outgoing="_xZU_ENK7Eeiy3aFFlnjiUA" incoming="_KtCJ-NK6Eeiy3aFFlnjiUA" actor="_KtCJ-9K6Eeiy3aFFlnjiUA">
@@ -34,7 +34,7 @@
         <iteratorExpression xmi:type="expression:Expression" xmi:id="_KtCJ7tK6Eeiy3aFFlnjiUA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
         <completionCondition xmi:type="expression:Expression" xmi:id="_KtCJ79K6Eeiy3aFFlnjiUA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         <formMapping xmi:type="process:FormMapping" xmi:id="_KtCJ8NK6Eeiy3aFFlnjiUA">
-          <targetForm xmi:type="expression:Expression" xmi:id="_hnVW4NLEEeikvNiLmJQnew" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          <targetForm xmi:type="expression:Expression" xmi:id="_l9xtUNeTEeinBoM-1o-2kg" name="newForm" content="15fe33e5-3725-48f0-ae30-ae7b30ee5601" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
         </formMapping>
         <contract xmi:type="process:Contract" xmi:id="_KtCJ8tK6Eeiy3aFFlnjiUA">
           <inputs xmi:type="process:ContractInput" xmi:id="_KISeQNLfEei1VqXIi0levw" name="itemInput" type="COMPLEX" multiple="true">
@@ -278,6 +278,49 @@
         </condition>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_KtCJ-9K6Eeiy3aFFlnjiUA" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor" initiator="true"/>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_sTtKENeSEeinBoM-1o-2kg" name="Production" version="7.8.0-002" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_sT9BsNeSEeinBoM-1o-2kg">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_sT9BsdeSEeinBoM-1o-2kg" name="Employee actor">
+            <groups xmi:type="actormapping:Groups" xmi:id="_sT9BsteSEeinBoM-1o-2kg">
+              <group>/acme</group>
+            </groups>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_sT9Bs9eSEeinBoM-1o-2kg"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_sT9BtNeSEeinBoM-1o-2kg"/>
+            <users xmi:type="actormapping:Users" xmi:id="_sT9BtdeSEeinBoM-1o-2kg"/>
+          </actorMapping>
+        </actorMappings>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_sTtxINeSEeinBoM-1o-2kg" type="CONNECTOR" definitionId="uipath-startjob" definitionVersion="1.0.0" implementationId="uipath-startjob-impl" implementationVersion="1.0.0-SNAPSHOT"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_sTtxIdeSEeinBoM-1o-2kg" type="CONNECTOR" definitionId="uipath-getjob" definitionVersion="1.0.0" implementationId="uipath-getjob-impl" implementationVersion="1.0.0-SNAPSHOT"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_sTtxIteSEeinBoM-1o-2kg" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_sTtxI9eSEeinBoM-1o-2kg" id="CONNECTOR">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_sTtxJNeSEeinBoM-1o-2kg" id="uipath-startjob-impl-1.0.0-SNAPSHOT">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_sTtxJdeSEeinBoM-1o-2kg" key="uipath-startjob-impl -- 1.0.0-SNAPSHOT" value="bonita-connector-uipath-1.0.0-SNAPSHOT.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_sTtxJteSEeinBoM-1o-2kg" key="uipath-startjob-impl -- 1.0.0-SNAPSHOT" value="okhttp-3.10.0.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_sTtxJ9eSEeinBoM-1o-2kg" key="uipath-startjob-impl -- 1.0.0-SNAPSHOT" value="retrofit-2.4.0.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_sTtxKNeSEeinBoM-1o-2kg" key="uipath-startjob-impl -- 1.0.0-SNAPSHOT" value="logging-interceptor-3.11.0.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_sTtxKdeSEeinBoM-1o-2kg" key="uipath-startjob-impl -- 1.0.0-SNAPSHOT" value="okio-1.14.0.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_sTtxKteSEeinBoM-1o-2kg" key="uipath-startjob-impl -- 1.0.0-SNAPSHOT" value="converter-jackson-2.4.0.jar" type="CONNECTOR"/>
+          </children>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_sTtxK9eSEeinBoM-1o-2kg" id="uipath-getjob-impl-1.0.0-SNAPSHOT">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_sTtxLNeSEeinBoM-1o-2kg" key="uipath-getjob-impl -- 1.0.0-SNAPSHOT" value="bonita-connector-uipath-1.0.0-SNAPSHOT.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_sTtxLdeSEeinBoM-1o-2kg" key="uipath-getjob-impl -- 1.0.0-SNAPSHOT" value="okhttp-3.10.0.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_sTtxLteSEeinBoM-1o-2kg" key="uipath-getjob-impl -- 1.0.0-SNAPSHOT" value="retrofit-2.4.0.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_sTtxL9eSEeinBoM-1o-2kg" key="uipath-getjob-impl -- 1.0.0-SNAPSHOT" value="logging-interceptor-3.11.0.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_sTtxMNeSEeinBoM-1o-2kg" key="uipath-getjob-impl -- 1.0.0-SNAPSHOT" value="okio-1.14.0.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_sTtxMdeSEeinBoM-1o-2kg" key="uipath-getjob-impl -- 1.0.0-SNAPSHOT" value="converter-jackson-2.4.0.jar" type="CONNECTOR"/>
+          </children>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_sTtxMteSEeinBoM-1o-2kg" id="DATA_TYPES"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_sTtxM9eSEeinBoM-1o-2kg" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_sT9BtteSEeinBoM-1o-2kg" key="JobStatusChecker.groovy" value="JobStatusChecker.groovy" type="GROOVY_SCRIPT"/>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_sTtxNNeSEeinBoM-1o-2kg" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_sTtxNdeSEeinBoM-1o-2kg" id="DATA_TYPES"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_sTtxNteSEeinBoM-1o-2kg" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_sT9Bt9eSEeinBoM-1o-2kg" key="JobStatusChecker.groovy" value="JobStatusChecker.groovy" type="GROOVY_SCRIPT"/>
+        </applicationDependencies>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_sTtxN9eSEeinBoM-1o-2kg" id="OTHER"/>
+      </configurations>
       <contract xmi:type="process:Contract" xmi:id="_KtCJ_NK6Eeiy3aFFlnjiUA">
         <inputs xmi:type="process:ContractInput" xmi:id="_q9BC8NK7Eeiy3aFFlnjiUA" name="todoName">
           <mapping xmi:type="process:ContractInputMapping" xmi:id="_q9BC8dK7Eeiy3aFFlnjiUA"/>

@@ -25,3 +25,5 @@ target/
 
 #only used as user preferences
 /database_connectors_properties
+/bonita-la-builder-7.8.0-SNAPSHOT-exec.jar
+/bonita-la-deployer-0.1.26.jar
