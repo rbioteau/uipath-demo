@@ -103,20 +103,6 @@
               </expression>
             </parameters>
           </configuration>
-          <outputs xmi:type="expression:Operation" xmi:id="_pxBNLtK_EeikvNiLmJQnew">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_pxBNL9K_EeikvNiLmJQnew" content=""/>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_pxBNMNK_EeikvNiLmJQnew" name="statusCode" content="statusCode" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Integer">
-              <referencedElements xmi:type="definition:Output" xmi:id="_pxBNMdK_EeikvNiLmJQnew" name="statusCode" type="java.lang.Integer"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_pxBNMtK_EeikvNiLmJQnew" type="ASSIGNMENT"/>
-          </outputs>
-          <outputs xmi:type="expression:Operation" xmi:id="_pxBNM9K_EeikvNiLmJQnew">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_pxBNNNK_EeikvNiLmJQnew" content=""/>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_pxBNNdK_EeikvNiLmJQnew" name="statusMessage" content="statusMessage" type="CONNECTOR_OUTPUT_TYPE">
-              <referencedElements xmi:type="definition:Output" xmi:id="_pxBNNtK_EeikvNiLmJQnew" name="statusMessage" type="java.lang.String"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_pxBNN9K_EeikvNiLmJQnew" type="ASSIGNMENT"/>
-          </outputs>
           <outputs xmi:type="expression:Operation" xmi:id="_pxBNONK_EeikvNiLmJQnew">
             <leftOperand xmi:type="expression:Expression" xmi:id="_pxBNOdK_EeikvNiLmJQnew" name="jobId" content="jobId" type="TYPE_VARIABLE">
               <referencedElements xmi:type="process:Data" xmi:id="_pxBNOtK_EeikvNiLmJQnew" name="jobId" dataType="_KtCKEdK6Eeiy3aFFlnjiUA"/>
@@ -158,20 +144,6 @@
               </expression>
             </parameters>
           </configuration>
-          <outputs xmi:type="expression:Operation" xmi:id="_RQQ-rNLAEeikvNiLmJQnew">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_RQQ-rdLAEeikvNiLmJQnew" content=""/>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_RQQ-rtLAEeikvNiLmJQnew" name="statusCode" content="statusCode" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Integer">
-              <referencedElements xmi:type="definition:Output" xmi:id="_RQQ-r9LAEeikvNiLmJQnew" name="statusCode" type="java.lang.Integer"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_RQQ-sNLAEeikvNiLmJQnew" type="ASSIGNMENT"/>
-          </outputs>
-          <outputs xmi:type="expression:Operation" xmi:id="_RQQ-sdLAEeikvNiLmJQnew">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_RQQ-stLAEeikvNiLmJQnew" content=""/>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_RQQ-s9LAEeikvNiLmJQnew" name="statusMessage" content="statusMessage" type="CONNECTOR_OUTPUT_TYPE">
-              <referencedElements xmi:type="definition:Output" xmi:id="_RQQ-tNLAEeikvNiLmJQnew" name="statusMessage" type="java.lang.String"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_RQQ-tdLAEeikvNiLmJQnew" type="ASSIGNMENT"/>
-          </outputs>
           <outputs xmi:type="expression:Operation" xmi:id="_RQQ-ttLAEeikvNiLmJQnew">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RQQ-t9LAEeikvNiLmJQnew" name="jobState" content="jobState" type="TYPE_VARIABLE">
               <referencedElements xmi:type="process:Data" xmi:id="_eGQZoNLAEeikvNiLmJQnew" name="jobState" dataType="_KtCKEdK6Eeiy3aFFlnjiUA"/>
@@ -232,6 +204,9 @@
       </data>
       <data xmi:type="process:Data" xmi:id="_atCbENLAEeikvNiLmJQnew" name="jobOutput" dataType="_KtCKEdK6Eeiy3aFFlnjiUA">
         <defaultValue xmi:type="expression:Expression" xmi:id="_atCbEdLAEeikvNiLmJQnew" content=""/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_DLMe8NgyEeidlMHmmmUBqA" name="queueItem" dataType="_KtCKFNK6Eeiy3aFFlnjiUA" className="org.bonita.example.todo.QueueItem">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_DLMe8dgyEeidlMHmmmUBqA" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_KtCJ9NK6Eeiy3aFFlnjiUA">
         <targetForm xmi:type="expression:Expression" xmi:id="_0p2UoNK7Eeiy3aFFlnjiUA" name="TODOSelection" content="4816b9e8-bcf4-4928-a1ad-221b0f28c95e" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
